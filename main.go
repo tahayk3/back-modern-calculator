@@ -32,6 +32,7 @@ func handleOperation(w http.ResponseWriter, r *http.Request) {
 
 	// Leer la clave de la API desde la variable de entorno
 	apiKey := os.Getenv("API_KEY")
+	log.Println("Valor de API_KEY:", apiKey)
 	if apiKey == "" {
 		log.Fatal("La clave de la API no está configurada")
 	}
